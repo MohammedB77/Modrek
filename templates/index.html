@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <title>مُدرك - أداة دراسية ذكية</title>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-right">
+        <div class="logo">مُدرك</div>
+    </div>
+</nav>
+
+<main>
+
+<section class="hero">
+    <div class="hero-glow hero-glow-one"></div>
+    <div class="hero-glow hero-glow-two"></div>
+
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="badge-dot"></span>
+            مراجعة أذكى تبدأ من ملزمتك
+        </div>
+
+        <h1>
+            ارفع منهجك الدراسي، وخل
+            <span>مُدرك</span>
+            يساعدك تراجع وتثبت المعلومات بطريقة ذكية
+        </h1>
+
+        <p>
+            حوّل وقت المذاكرة إلى مراجعة تفاعلية，
+            واختبر نفسك بأسئلة مبنية على محتوى دراستك
+        </p>
+
+        <div class="hero-actions">
+            <a href="#upload" class="hero-button">
+                ابدأ المراجعة
+                <span>←</span>
+            </a>
+
+            <div class="hero-note">
+                <span>PDF</span>
+                ارفع ملزمتك وخل الباقي علينا
+            </div>
+        </div>
+    </div>
+
+    <div class="visual">
+        <div class="visual-glow"></div>
+
+        <div class="floating-chip chip-one">
+            ✓ سؤال جديد
+        </div>
+
+        <div class="floating-chip chip-two">
+            📚 مراجعة أسهل
+        </div>
+
+        <div class="cards">
+            <img src="/static/css/Assets/Group 39.png" class="purple-card" alt="">
+            <img src="/static/css/Assets/WHITECARD.png" class="white-card" alt="">
+        </div>
+
+        <img src="/static/css/Assets/an_arrow.png" class="arrow" alt="">
+        <img src="/static/css/Assets/computer figure.png" class="computer" alt="">
+    </div>
+</section>
+
+
+<section class="upload-section" id="upload">
+
+    <div class="upload-heading">
+        <span class="section-label">الخطوة الأولى</span>
+
+        <h2>
+            خلّ <span>مُدرك</span> يبدأ معك
+        </h2>
+
+        <p>
+            ارفع ملزمتك الدراسية بصيغة PDF أو Word أو TXT
+            ودع مُدرك يحول محتواها إلى تجربة مراجعة ذكية
+        </p>
+    </div>
+
+    <div class="upload-box">
+
+        <div class="pdf-icon">PDF</div>
+
+        <h2>ارفع ملزمتك من هنا</h2>
+
+        <input
+            type="file"
+            id="fileInput"
+            accept=".pdf,.docx,.txt,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain"
+            hidden
+        >
+
+        <button
+            type="button"
+            class="choose-button"
+            id="chooseButton"
+        >
+            أرفق الملزمة
+        </button>
+
+        <div id="selectedFile"></div>
+
+        <div class="difficulty-box">
+            <h3>مستوى الأسئلة</h3>
+
+            <div class="difficulty-options">
+                <button type="button" class="difficulty active" data-level="easy">سهل</button>
+                <button type="button" class="difficulty" data-level="medium">متوسط</button>
+                <button type="button" class="difficulty" data-level="hard">صعب</button>
+                <button type="button" class="difficulty" data-level="mixed">مكس</button>
+            </div>
+        </div>
+
+        <div class="language-box">
+            <h3>لغة البطاقات</h3>
+
+            <div class="language-options">
+                <button type="button" class="language active" data-language="ar">العربية</button>
+                <button type="button" class="language" data-language="en">English</button>
+            </div>
+        </div>
+
+        <div class="card-count-box">
+            <h3>عدد البطاقات</h3>
+
+            <p>اختر العدد المناسب لمراجعتك</p>
+
+            <div class="card-count-options">
+                <button type="button" class="card-count" data-count="4">4</button>
+                <button type="button" class="card-count" data-count="6">6</button>
+                <button type="button" class="card-count active" data-count="8">8</button>
+                <button type="button" class="card-count" data-count="10">10</button>
+                <button type="button" class="card-count" data-count="12">12</button>
+            </div>
+        </div>
+
+        <button
+            type="button"
+            class="generate-button"
+            id="generateButton"
+            disabled
+        >
+            إنشاء البطاقات
+        </button>
+
+        <div id="fileInfo"></div>
+
+    </div>
+</section>
+
+
+<section class="flashcards-section" id="flashcardsSection">
+
+    <div class="flashcards-heading">
+        <span class="section-label">مراجعتك</span>
+
+        <h2>
+            بطاقاتك <span>جاهزة</span>
+        </h2>
+
+        <p id="flashcardsStatus">
+             جاري تجهيز بطاقات المراجعة...
+        </p>
+    </div>
+
+    <div class="flashcards" id="flashcards"></div>
+
+    <button
+        type="button"
+        class="regenerate-button"
+        id="regenerateButton"
+        style="display: none;"
+    >
+        🔄 إعادة توليد
+    </button>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-logo">مُدرك</div>
+
+    <p>مذاكرة أذكى، مراجعة أفضل.</p>
+
+    <div class="social-links">
+
+        <a
+            href="https://www.instagram.com/jizz2_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+        >
+            <span>◎</span>
+            Instagram
+        </a>
+
+        <a
+            href="https://t.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+        >
+            <span>✈</span>
+            Telegram
+        </a>
+
+    </div>
+
+    <span>
+        تم إنشاء مُدرك بواسطة
+        <strong>Mohammed Bamhraz</strong>
+    </span>
+
+    <small>© 2026 Modrek</small>
+
+</footer>
+
+<script src="/static/js/script.js"></script>
+
+</body>
+</html>
