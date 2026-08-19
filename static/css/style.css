@@ -991,3 +991,22 @@ body {
         padding: 24px 18px;
     }
 }
+
+.developer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.developer-email {
+    color: inherit;
+    opacity: .65;
+    font-size: 13px;
+    text-decoration: none;
+    transition: opacity .2s ease;
+}
+
+.developer-email:hover {
+    opacity: 1;
+}
