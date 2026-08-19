@@ -318,7 +318,6 @@ GEMINI_API_KEY
 ## 📄 License
 
 This project currently does not include a specific open-source license.
-
 ```
 
 **هذه المرة كل شيء من `#` إلى آخر سطر داخل Markdown صحيح**: العناوين `##`، القوائم، الجداول، الأكواد، الصور، والروابط.
