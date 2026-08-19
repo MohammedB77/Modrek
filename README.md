@@ -1,8 +1,4 @@
-صح، فهمتك الآن: **تبي حتى النصوص الموجودة في آخر الـREADME تكون كلها Markdown فعلية**، وليس مجرد نص داخل بلوك.
 
-هذه **النسخة كاملة من أولها لآخرها**، وكل شيء فيها Markdown:
-
-````markdown
 # 🧠 مُدرك | Modrek
 
 > AI-powered flashcard generator that transforms your study materials into smart, interactive flashcards.
@@ -320,10 +316,6 @@ GEMINI_API_KEY
 ---
 
 ## 📄 License
-
-This project currently does not include a specific open-source license.
-
 ```
 
-**هذه المرة كل شيء من `#` إلى آخر سطر داخل Markdown صحيح**: العناوين `##`، القوائم، الجداول، الأكواد، الصور، والروابط.
 ```
